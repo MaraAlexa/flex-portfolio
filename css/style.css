@@ -1,0 +1,89 @@
+.wrapper {
+  display: flex;
+  background: green;
+  min-height: 100vh; }
+
+main, aside {
+  padding: 0 1.5rem; }
+
+aside {
+  background: linear-gradient(to left, #FBD3E9, #BB377D);
+  flex: 1; }
+
+ul {
+  padding: 0; }
+  ul li {
+    list-style: none; }
+
+.logo {
+  width: 75px;
+  height: 75px;
+  margin: 1rem 0 1rem 1rem;
+  background-image: url("../img/logo.svg"); }
+
+.experience, .experience-continue {
+  display: flex; }
+  .experience .big-letter, .experience-continue .big-letter {
+    max-width: 150px;
+    font-size: 12rem;
+    color: whitesmoke; }
+  .experience .descr, .experience-continue .descr {
+    max-width: 385px;
+    padding: 1rem;
+    align-self: center;
+    color: whitesmoke; }
+    .experience .descr h3, .experience-continue .descr h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase; }
+    .experience .descr ul li, .experience-continue .descr ul li {
+      font-size: 0.9rem; }
+
+main {
+  background-image: url("../img/main-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 2;
+  display: flex; }
+
+section.about-me {
+  padding: 1.5rem;
+  height: 80%;
+  background: azure;
+  max-width: 300px;
+  margin-left: -10%;
+  align-self: center; }
+  section.about-me .profile-face {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    margin: 2rem auto;
+    background-image: url("../img/profile_face.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 3px solid gray; }
+  section.about-me .name, section.about-me .tagline, section.about-me .decoration-line {
+    text-align: center; }
+
+section.portfolio {
+  background: pink;
+  padding: 1.5rem;
+  height: 80%;
+  align-self: center;
+  min-width: 600px;
+  display: flex; }
+  section.portfolio .projects {
+    background: gray;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    section.portfolio .projects .project {
+      width: 50%;
+      height: 200px;
+      flex: 1 1 40%;
+      border: 2px solid red; }
+
+/*# sourceMappingURL=style.css.map */
