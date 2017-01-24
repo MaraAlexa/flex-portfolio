@@ -8,7 +8,9 @@ main, aside {
 
 aside {
   background: linear-gradient(to left, #FBD3E9, #BB377D);
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  min-width: 450px; }
 
 ul {
   padding: 0; }
@@ -19,7 +21,12 @@ ul {
   width: 75px;
   height: 75px;
   margin: 1rem 0 1rem 1rem;
-  background-image: url("../img/logo.svg"); }
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat; }
+
+.experience-container {
+  padding: 2rem 0;
+  align-self: center; }
 
 .experience, .experience-continue {
   display: flex; }
@@ -28,8 +35,10 @@ ul {
     font-size: 12rem;
     color: whitesmoke; }
   .experience .descr, .experience-continue .descr {
-    max-width: 385px;
-    padding: 1rem;
+    max-width: 290px;
+    min-width: 200px;
+    padding: 0.7rem;
+    padding-right: 2rem;
     align-self: center;
     color: whitesmoke; }
     .experience .descr h3, .experience-continue .descr h3 {
@@ -38,52 +47,99 @@ ul {
     .experience .descr ul li, .experience-continue .descr ul li {
       font-size: 0.9rem; }
 
+section.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: gray;
+  z-index: 1;
+  padding: 1.5rem;
+  height: 80%;
+  background: white;
+  max-width: 400px;
+  margin-right: -45%;
+  align-self: center;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.22), inset 0 0 1px rgba(0, 0, 0, 0.18); }
+  section.about-me .profile-face {
+    width: 100px;
+    height: 100px;
+    margin: 2rem auto;
+    background-image: url("../img/profile_face.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 4px solid #f1bcd9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.22), inset 0 0 1px rgba(0, 0, 0, 0.18); }
+  section.about-me .name, section.about-me .tagline, section.about-me .decoration-line {
+    text-align: center; }
+  section.about-me .aboutMe-content {
+    margin-bottom: 25%; }
+  section.about-me .designer, section.about-me .developer {
+    padding: 1rem; }
+    section.about-me .designer p, section.about-me .developer p {
+      font-size: 0.8rem;
+      line-height: 1.2rem; }
+
 main {
   background-image: url("../img/main-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   flex: 2;
-  display: flex; }
-
-section.about-me {
-  padding: 1.5rem;
-  height: 80%;
-  background: azure;
-  max-width: 300px;
-  margin-left: -10%;
-  align-self: center; }
-  section.about-me .profile-face {
-    width: 100px;
-    height: 100px;
-    background: pink;
-    margin: 2rem auto;
-    background-image: url("../img/profile_face.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    border: 3px solid gray; }
-  section.about-me .name, section.about-me .tagline, section.about-me .decoration-line {
-    text-align: center; }
+  display: flex;
+  justify-content: center; }
 
 section.portfolio {
-  background: pink;
+  border: 2px solid pink;
   padding: 1.5rem;
   height: 80%;
   align-self: center;
-  min-width: 600px;
-  display: flex; }
+  min-width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  section.portfolio .title-projects {
+    padding: 2rem;
+    text-align: center; }
   section.portfolio .projects {
-    background: gray;
     display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap; }
     section.portfolio .projects .project {
-      width: 50%;
-      height: 200px;
-      flex: 1 1 40%;
-      border: 2px solid red; }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      height: 300px;
+      border: 2px solid white; }
+    section.portfolio .projects .project1, section.portfolio .projects .project4 {
+      flex: 10 5 40%; }
+    section.portfolio .projects .project2, section.portfolio .projects .project3 {
+      flex: 1 2 40%; }
+
+.project1 {
+  background-image: url("../img/wineBg.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.project2 {
+  background-image: url("../img/resourcesBg.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.project3 {
+  background-image: url("../img/valutaBg.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.project4 {
+  background-image: url("../img/jsBg.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

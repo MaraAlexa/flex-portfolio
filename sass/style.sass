@@ -1,3 +1,8 @@
+=bgImg($url)
+  background-image: url($url)
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
 .wrapper
   display: flex
   background: green
@@ -11,7 +16,8 @@ main, aside
 aside
   background: linear-gradient(to left, #FBD3E9 , #BB377D)
   flex: 1
-
+  display: flex
+  min-width: 450px
 
 ul
   padding: 0
@@ -23,6 +29,10 @@ ul
   height: 75px
   margin: 1rem 0 1rem 1rem
   background-image: url('../img/logo.svg')
+  background-repeat: no-repeat
+.experience-container
+  padding: 2rem 0
+  align-self: center
 
 
 .experience, .experience-continue
@@ -33,8 +43,10 @@ ul
     font-size: 12rem
     color: whitesmoke
   .descr
-    max-width: 385px
-    padding: 1rem
+    max-width: 290px
+    min-width: 200px
+    padding: .7rem
+    padding-right: 2rem
     align-self: center
     color: whitesmoke
     h3
@@ -43,7 +55,41 @@ ul
     ul
       li
         font-size: .9rem
+section.about-me
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  color: gray
+  z-index: 1
+  padding: 1.5rem
+  height: 80%
+  background: white
+  max-width: 400px
+  margin-right: -45%
+  align-self: center
+  border-radius: 4px
+  box-shadow:  0 0 5px rgba(0, 0, 0, 0.22), inset 0 0 1px rgba(0, 0, 0, 0.18)
 
+  .profile-face
+    width: 100px
+    height: 100px
+    margin: 2rem auto
+    background-image: url('../img/profile_face.png')
+    background-size: cover
+    background-repeat: no-repeat
+    border-radius: 50%
+    border: 4px solid #f1bcd9
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.22), inset 0 0 1px rgba(0, 0, 0, 0.18)
+  .name, .tagline, .decoration-line
+    text-align: center
+  .aboutMe-content
+    margin-bottom: 25%
+
+  .designer, .developer
+    padding: 1rem
+    p
+      font-size: .8rem
+      line-height: 1.2rem
 
 // MAIN STYLE
 main
@@ -53,42 +99,42 @@ main
   background-repeat: no-repeat
   flex: 2
   display: flex
-section.about-me
-  padding: 1.5rem
-  height: 80%
-  background: azure
-  max-width: 300px
-  margin-left: -10%
-  align-self: center
-  .profile-face
-    width: 100px
-    height: 100px
-    background: pink
-    margin: 2rem auto
-    background-image: url('../img/profile_face.png')
-    background-size: cover
-    background-repeat: no-repeat
-    border-radius: 50%
-    border: 3px solid gray
-  .name, .tagline, .decoration-line
-    text-align: center
+  justify-content: center
+
 // SECTION PROJECTS
 section.portfolio
-  background: pink
+  border: 2px solid pink
   padding: 1.5rem
   height: 80%
   align-self: center
-  min-width: 600px
+  min-width: 60%
   display: flex
+  justify-content: center
+  flex-direction: column
+  .title-projects
+    padding: 2rem
+    text-align: center
   .projects
-    background: gray
+    // background: gray
     display: flex
     width: 100%
-    justify-content: center
-    align-items: center
     flex-wrap: wrap
     .project
-      width: 50%
-      height: 200px
-      flex: 1 1 40%
-      border: 2px solid red
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 4px
+      height: 300px
+      border: 2px solid white
+    .project1, .project4
+      flex: 10 5 40%
+    .project2, .project3
+      flex: 1 2 40%
+.project1
+  +bgImg('../img/wineBg.svg')
+.project2
+  +bgImg('../img/resourcesBg.svg')
+.project3
+  +bgImg('../img/valutaBg.svg')
+.project4
+  +bgImg('../img/jsBg.svg')
