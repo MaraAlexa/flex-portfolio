@@ -1,3 +1,6 @@
+html {
+  font-family: "Josefin Slab", serif; }
+
 .wrapper {
   display: flex;
   background: green;
@@ -18,7 +21,7 @@ ul {
     list-style: none; }
 
 .logo {
-  width: 75px;
+  min-width: 75px;
   height: 75px;
   margin: 1rem 0 1rem 1rem;
   background-image: url("../img/logo.svg");
@@ -45,16 +48,16 @@ ul {
       font-size: 0.8rem;
       text-transform: uppercase; }
     .experience .descr ul li, .experience-continue .descr ul li {
-      font-size: 0.9rem; }
+      font-size: 1rem; }
 
 section.about-me {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   color: gray;
   z-index: 1;
   padding: 1.5rem;
-  height: 80%;
+  height: 86%;
   background: white;
   max-width: 400px;
   margin-right: -45%;
@@ -64,7 +67,7 @@ section.about-me {
   section.about-me .profile-face {
     width: 100px;
     height: 100px;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     background-image: url("../img/profile_face.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -73,13 +76,48 @@ section.about-me {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.22), inset 0 0 1px rgba(0, 0, 0, 0.18); }
   section.about-me .name, section.about-me .tagline, section.about-me .decoration-line {
     text-align: center; }
-  section.about-me .aboutMe-content {
-    margin-bottom: 25%; }
-  section.about-me .designer, section.about-me .developer {
-    padding: 1rem; }
-    section.about-me .designer p, section.about-me .developer p {
-      font-size: 0.8rem;
-      line-height: 1.2rem; }
+  section.about-me h2.name {
+    font-size: 30px;
+    font-weight: 300;
+    color: #272556;
+    text-transform: uppercase;
+    margin: 7px; }
+    section.about-me h2.name span {
+      font-weight: 600; }
+  section.about-me #infinity-decoration {
+    padding: 0;
+    position: relative;
+    width: 43px;
+    height: 15px;
+    margin: 0 auto; }
+  section.about-me #infinity-decoration:before,
+  section.about-me #infinity-decoration:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border: 5px solid #de4a75;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-45deg); }
+  section.about-me #infinity-decoration:after {
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(45deg); }
+  section.about-me .header, section.about-me .aboutMe-content {
+    margin-bottom: 10px; }
+  section.about-me #designer, section.about-me #developer {
+    color: #888f91;
+    padding: 10px 0; }
+    section.about-me #designer h3.title, section.about-me #developer h3.title {
+      color: #666b6d;
+      font-weight: 600;
+      font-size: 26px; }
+    section.about-me #designer p, section.about-me #developer p {
+      font-size: 1.1rem;
+      line-height: 1.3rem; }
 
 main {
   background-image: url("../img/main-bg.png");
@@ -91,11 +129,10 @@ main {
   justify-content: center; }
 
 section.portfolio {
-  border: 2px solid pink;
-  padding: 1.5rem;
-  height: 80%;
+  padding: 0 12rem;
+  height: 90%;
   align-self: center;
-  min-width: 60%;
+  min-width: 66%;
   display: flex;
   justify-content: center;
   flex-direction: column; }
@@ -104,19 +141,25 @@ section.portfolio {
     text-align: center; }
   section.portfolio .projects {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    border: 2px solid red; }
     section.portfolio .projects .project {
+      margin-bottom: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 4px;
+      border-radius: 8px;
       height: 300px;
-      border: 2px solid white; }
+      border: 2px solid white;
+      padding: 20px;
+      color: #fff;
+      font-size: 20px; }
     section.portfolio .projects .project1, section.portfolio .projects .project4 {
-      flex: 10 5 40%; }
+      flex: 1 5 600px; }
     section.portfolio .projects .project2, section.portfolio .projects .project3 {
-      flex: 1 2 40%; }
+      flex: 1 1 400px; }
+    section.portfolio .projects .project1, section.portfolio .projects .project3 {
+      margin-right: 20px; }
 
 .project1 {
   background-image: url("../img/wineBg.svg");
@@ -141,5 +184,11 @@ section.portfolio {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; }
+
+@media(max-width:2200px) {
+  main {
+    justify-content: flex-end; }
+    main .portfolio {
+      margin-right: 6rem; } }
 
 /*# sourceMappingURL=style.css.map */

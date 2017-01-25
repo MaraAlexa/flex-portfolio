@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600" rel="stylesheet">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
@@ -29,7 +30,7 @@
               <div class="experience">
                   <div class="big-letter">2</div>
                   <div class="descr">
-                      <h3>Years of experience</h3>
+                      <h3 class="title">Years of experience</h3>
                       <ul>
                           <li>Between 2014 and 2016 I worked with several companies such as <a href="nbwm">NBWM</a> and <a href="greathair.nl">greathair.nl</a>. </li>
                           <li>I was involved in several projects parts of which are in my portfolio,</li>
@@ -58,18 +59,17 @@
             <section class="about-me">
               <div class="header">
                 <div class="profile-face"></div>
-                <h2 class="name">Mara Alexa</h2>
-                <span class="decoration-line"></span>
-                <p class="tagline">About me</p>
+                <h2 class="name">Mara<br><span>Alexa</span></h2>
+                <div id="infinity-decoration"></div>
               </div>
               <div class="aboutMe-content">
-                <div class="designer">
-                    <h3>I am a designer</h3>
+                <div id="designer">
+                    <h3 class="title">I am a designer</h3>
                     <p>I remeber that some 5 years ago I was struck by the beauty of web design. Ever since I wanted to know what makes exceptional web design. It’s a never-ending quest but during these years I gained an eye for elegant typography, harmonious
                         color combinations and a sense of easy to use, simple interaction. </p>
                 </div>
-                <div class="developer">
-                    <h3>I am a developer</h3>
+                <div id="developer">
+                    <h3 class="title">I am a developer</h3>
                     <p>My passion for code comes from the fact that I love to bring my designs into (digital) reality. I enjoy coding as a process of splitting a big task into manageable chunks and connecting them into a neat arrangement. I especially like
                         to work with the new tech. ES6 is so much better and more expressive while React makes building complex UI’s an enjoyable process. Check out my wineapp to see React in action with firebase to hold on to data. </p>
                 </div>
@@ -81,11 +81,31 @@
             <section class="portfolio">
               <h1 class="title-projects">Portfolio</h1>
               <div class="projects">
-                <div class="project project1">React App</div>
-                <div class="project project2">Web Resources</div>
-                <div class="project project3">NBWM</div>
-                <div class="project project4">ES6</div>
-
+                <div class="project project1">
+                  <div class="title-project">
+                    <h3>React App</h3>
+                  </div>
+                  <p class="project-descr">This is a wine app where a customer can add wines to form an order while
+                    store owner can edit in real-time the attributes of each product</p>
+                </div>
+                <div class="project project2">
+                  <div class="title-project">
+                    <h3>Web Resouces</h3>
+                  </div>
+                  <p class="project-descr"></p>
+                </div>
+                <div class="project project3">
+                  <div class="title-project">
+                    <h3>NBWM</h3>
+                  </div>
+                  <p class="project-descr"></p>
+                </div>
+                <div class="project project4">
+                  <div class="title-project">
+                    <h3>ES6</h3>
+                  </div>
+                  <p class="project-descr"></p>
+                </div>
               </div>
             </section>
         </main>

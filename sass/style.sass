@@ -1,8 +1,13 @@
+
 =bgImg($url)
   background-image: url($url)
   background-position: center center
   background-size: cover
   background-repeat: no-repeat
+// html *
+//   -webkit-font-smoothing: antialiased
+html
+  font-family: 'Josefin Slab', serif
 .wrapper
   display: flex
   background: green
@@ -25,7 +30,7 @@ ul
     list-style: none
 
 .logo
-  width: 75px
+  min-width: 75px
   height: 75px
   margin: 1rem 0 1rem 1rem
   background-image: url('../img/logo.svg')
@@ -54,15 +59,15 @@ ul
       text-transform: uppercase
     ul
       li
-        font-size: .9rem
+        font-size: 1rem
 section.about-me
   display: flex
   flex-direction: column
-  justify-content: space-around
+  justify-content: center
   color: gray
   z-index: 1
   padding: 1.5rem
-  height: 80%
+  height: 86%
   background: white
   max-width: 400px
   margin-right: -45%
@@ -73,7 +78,7 @@ section.about-me
   .profile-face
     width: 100px
     height: 100px
-    margin: 2rem auto
+    margin: 1.5rem auto
     background-image: url('../img/profile_face.png')
     background-size: cover
     background-repeat: no-repeat
@@ -82,14 +87,52 @@ section.about-me
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.22), inset 0 0 1px rgba(0, 0, 0, 0.18)
   .name, .tagline, .decoration-line
     text-align: center
-  .aboutMe-content
-    margin-bottom: 25%
+  h2.name
+    font-size: 30px
+    font-weight: 300
+    color: #272556
+    text-transform: uppercase
+    margin: 7px
+    span
+      font-weight: 600
 
-  .designer, .developer
-    padding: 1rem
+  #infinity-decoration
+    padding: 0
+    position: relative
+    width: 43px
+    height: 15px
+    margin: 0 auto
+  #infinity-decoration:before,
+  #infinity-decoration:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 10px
+    height: 10px
+    border: 5px solid #de4a75
+    border-radius: 50px 50px 0 50px
+    transform: rotate(-45deg)
+  #infinity-decoration:after
+    left: auto
+    right: 0
+    border-radius: 50px 50px 50px 0
+    transform: rotate(45deg)
+
+  .header, .aboutMe-content
+    margin-bottom: 10px
+
+
+  #designer, #developer
+    color: #888f91
+    padding: 10px 0
+    h3.title
+      color: #666b6d
+      font-weight: 600
+      font-size: 26px
     p
-      font-size: .8rem
-      line-height: 1.2rem
+      font-size: 1.1rem
+      line-height: 1.3rem
 
 // MAIN STYLE
 main
@@ -103,11 +146,11 @@ main
 
 // SECTION PROJECTS
 section.portfolio
-  border: 2px solid pink
-  padding: 1.5rem
-  height: 80%
+  // border: 2px solid pink
+  padding: 0 12rem
+  height: 90%
   align-self: center
-  min-width: 60%
+  min-width: 66%
   display: flex
   justify-content: center
   flex-direction: column
@@ -117,19 +160,25 @@ section.portfolio
   .projects
     // background: gray
     display: flex
-    width: 100%
     flex-wrap: wrap
+    border: 2px solid red
     .project
+      margin-bottom: 20px
       display: flex
       justify-content: center
       align-items: center
-      border-radius: 4px
+      border-radius: 8px
       height: 300px
       border: 2px solid white
+      padding: 20px
+      color: #fff
+      font-size: 20px
     .project1, .project4
-      flex: 10 5 40%
+      flex: 1 5 600px
     .project2, .project3
-      flex: 1 2 40%
+      flex: 1 1 400px
+    .project1, .project3
+      margin-right: 20px
 .project1
   +bgImg('../img/wineBg.svg')
 .project2
@@ -138,3 +187,7 @@ section.portfolio
   +bgImg('../img/valutaBg.svg')
 .project4
   +bgImg('../img/jsBg.svg')
+
+// MEDIA QUERIES
+
+@import "media-queries"
