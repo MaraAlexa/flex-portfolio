@@ -1,6 +1,27 @@
 @media(max-width:2250px) {
   main .portfolio {
-    align-items: flex-end;
-    margin-right: 6rem; } }
+    align-items: flex-end; }
+
+  aside .experience-container {
+    margin-left: 6rem; } }
+@media(max-width: 1530px) {
+  main section.portfolio {
+    margin-right: 6rem; }
+    main section.portfolio .projects .project:nth-child(1), main section.portfolio .projects .project:nth-child(3) {
+      margin-right: 0; }
+    main section.portfolio .projects .project:nth-child(2) {
+      margin-right: 10px; }
+    main section.portfolio .projects .project:nth-child(4) {
+      margin-right: 0; } }
+@media(max-width: 1360px) {
+  aside {
+    flex-direction: column; }
+    aside section.about-me {
+      margin-right: 0; }
+
+  main .portfolio {
+    align-items: center;
+    margin-right: 0;
+    justify-content: center; } }
 
 /*# sourceMappingURL=media-queries.css.map */

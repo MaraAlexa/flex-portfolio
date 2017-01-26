@@ -7,13 +7,19 @@ html {
   min-height: 100vh; }
 
 main, aside {
-  padding: 0 1.5rem; }
+  padding: 4rem 2.5rem; }
+
+main .portfolio {
+  margin: 0 6rem; }
+
+aside .experience-container {
+  margin-left: 6rem; }
 
 aside {
   background: linear-gradient(to left, #FBD3E9, #BB377D);
   flex: 1;
   display: flex;
-  min-width: 400px; }
+  max-width: 500px; }
 
 ul {
   padding: 0; }
@@ -21,7 +27,7 @@ ul {
     list-style: none; }
 
 .logo {
-  min-width: 75px;
+  width: 75px;
   height: 75px;
   margin: 1rem 0 1rem 1rem;
   background-image: url("../img/logo.svg");
@@ -29,10 +35,16 @@ ul {
 
 .experience-container {
   padding: 2rem 0;
-  align-self: center; }
+  align-self: center;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column; }
 
 .experience, .experience-continue {
-  display: flex; }
+  display: flex;
+  padding: 1rem 0; }
   .experience .big-letter, .experience-continue .big-letter {
     max-width: 150px;
     font-size: 12rem;
@@ -53,11 +65,10 @@ ul {
 section.about-me {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: gray;
+  justify-content: space-around;
   z-index: 1;
   padding: 1.5rem;
-  height: 86%;
+  height: 90%;
   background: white;
   max-width: 400px;
   min-width: 280px;
@@ -109,6 +120,10 @@ section.about-me {
     transform: rotate(45deg); }
   section.about-me .header, section.about-me .aboutMe-content {
     margin-bottom: 10px; }
+  section.about-me .header {
+    margin-top: 40px; }
+  section.about-me .aboutMe-content {
+    margin-bottom: 50px; }
   section.about-me #designer, section.about-me #developer {
     color: #888f91;
     padding: 10px 0; }
@@ -136,14 +151,18 @@ section.portfolio {
   justify-content: center;
   flex-direction: column; }
   section.portfolio .title-projects {
+    font-size: 45px;
     padding: 2rem;
-    text-align: center; }
+    text-align: center;
+    color: #272556; }
   section.portfolio .projects {
-    background: gray;
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid red;
-    max-width: 70%; }
+    max-width: 80%; }
+    section.portfolio .projects .project:nth-child(1), section.portfolio .projects .project:nth-child(2) {
+      margin-bottom: 20px; }
+    section.portfolio .projects .project:nth-child(1), section.portfolio .projects .project:nth-child(3) {
+      margin-right: 10px; }
     section.portfolio .projects .project {
       display: flex;
       justify-content: center;
@@ -154,8 +173,6 @@ section.portfolio {
       padding: 30px;
       color: #fff;
       font-size: 20px; }
-      section.portfolio .projects .project:nth-child(1), section.portfolio .projects .project:nth-child(2) {
-        margin-bottom: 20px; }
 
 .project1 {
   background-image: url("../img/wineBg.svg");
@@ -187,7 +204,28 @@ section.portfolio {
 
 @media(max-width:2250px) {
   main .portfolio {
-    align-items: flex-end;
-    margin-right: 6rem; } }
+    align-items: flex-end; }
+
+  aside .experience-container {
+    margin-left: 6rem; } }
+@media(max-width: 1530px) {
+  main section.portfolio {
+    margin-right: 6rem; }
+    main section.portfolio .projects .project:nth-child(1), main section.portfolio .projects .project:nth-child(3) {
+      margin-right: 0; }
+    main section.portfolio .projects .project:nth-child(2) {
+      margin-right: 10px; }
+    main section.portfolio .projects .project:nth-child(4) {
+      margin-right: 0; } }
+@media(max-width: 1360px) {
+  aside {
+    flex-direction: column; }
+    aside section.about-me {
+      margin-right: 0; }
+
+  main .portfolio {
+    align-items: center;
+    margin-right: 0;
+    justify-content: center; } }
 
 /*# sourceMappingURL=style.css.map */
