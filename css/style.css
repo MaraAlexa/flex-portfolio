@@ -13,7 +13,7 @@ aside {
   background: linear-gradient(to left, #FBD3E9, #BB377D);
   flex: 1;
   display: flex;
-  min-width: 450px; }
+  min-width: 400px; }
 
 ul {
   padding: 0; }
@@ -60,6 +60,7 @@ section.about-me {
   height: 86%;
   background: white;
   max-width: 400px;
+  min-width: 280px;
   margin-right: -45%;
   align-self: center;
   border-radius: 4px;
@@ -129,10 +130,8 @@ main {
   justify-content: center; }
 
 section.portfolio {
-  padding: 0 12rem;
   height: 90%;
-  align-self: center;
-  min-width: 66%;
+  align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column; }
@@ -140,55 +139,55 @@ section.portfolio {
     padding: 2rem;
     text-align: center; }
   section.portfolio .projects {
+    background: gray;
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid red; }
+    border: 2px solid red;
+    max-width: 70%; }
     section.portfolio .projects .project {
-      margin-bottom: 20px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+      flex-direction: column;
       border-radius: 8px;
       height: 300px;
-      border: 2px solid white;
-      padding: 20px;
+      padding: 30px;
       color: #fff;
       font-size: 20px; }
-    section.portfolio .projects .project1, section.portfolio .projects .project4 {
-      flex: 1 5 600px; }
-    section.portfolio .projects .project2, section.portfolio .projects .project3 {
-      flex: 1 1 400px; }
-    section.portfolio .projects .project1, section.portfolio .projects .project3 {
-      margin-right: 20px; }
+      section.portfolio .projects .project:nth-child(1), section.portfolio .projects .project:nth-child(2) {
+        margin-bottom: 20px; }
 
 .project1 {
   background-image: url("../img/wineBg.svg");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  flex: 1 1 50%; }
 
 .project2 {
   background-image: url("../img/resourcesBg.svg");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  flex: 1 1 30%; }
 
 .project3 {
   background-image: url("../img/valutaBg.svg");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  flex: 1 1 30%; }
 
 .project4 {
   background-image: url("../img/jsBg.svg");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  flex: 1 1 50%; }
 
-@media(max-width:2200px) {
-  main {
-    justify-content: flex-end; }
-    main .portfolio {
-      margin-right: 6rem; } }
+@media(max-width:2250px) {
+  main .portfolio {
+    align-items: flex-end;
+    margin-right: 6rem; } }
 
 /*# sourceMappingURL=style.css.map */

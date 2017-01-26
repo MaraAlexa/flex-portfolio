@@ -22,7 +22,7 @@ aside
   background: linear-gradient(to left, #FBD3E9 , #BB377D)
   flex: 1
   display: flex
-  min-width: 450px
+  min-width: 400px
 
 ul
   padding: 0
@@ -70,6 +70,7 @@ section.about-me
   height: 86%
   background: white
   max-width: 400px
+  min-width: 280px
   margin-right: -45%
   align-self: center
   border-radius: 4px
@@ -147,10 +148,10 @@ main
 // SECTION PROJECTS
 section.portfolio
   // border: 2px solid pink
-  padding: 0 12rem
+  // padding: 0 12rem
   height: 90%
-  align-self: center
-  min-width: 66%
+  align-items: center
+  // min-width: 66%
   display: flex
   justify-content: center
   flex-direction: column
@@ -158,35 +159,47 @@ section.portfolio
     padding: 2rem
     text-align: center
   .projects
-    // background: gray
+    background: gray
     display: flex
     flex-wrap: wrap
     border: 2px solid red
+    max-width: 70%
     .project
-      margin-bottom: 20px
       display: flex
       justify-content: center
-      align-items: center
+      align-items: flex-start
+      flex-direction: column
       border-radius: 8px
       height: 300px
-      border: 2px solid white
-      padding: 20px
+      // border: 2px solid white
+      padding: 30px
       color: #fff
       font-size: 20px
-    .project1, .project4
-      flex: 1 5 600px
-    .project2, .project3
-      flex: 1 1 400px
-    .project1, .project3
-      margin-right: 20px
+      &:nth-child(1), &:nth-child(2)
+        margin-bottom: 20px
+
+
+    // .project1, .project4
+    //   flex: 1 5 600px
+    // .project2, .project3
+    //   flex: 1 1 400px
+    // .project1, .project3
+    //   margin-right: 20px
 .project1
   +bgImg('../img/wineBg.svg')
+  flex: 1 1 50%
 .project2
   +bgImg('../img/resourcesBg.svg')
+  flex: 1 1 30%
+
 .project3
   +bgImg('../img/valutaBg.svg')
+  flex: 1 1 30%
+
 .project4
   +bgImg('../img/jsBg.svg')
+  flex: 1 1 50%
+
 
 // MEDIA QUERIES
 

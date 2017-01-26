@@ -1,7 +1,6 @@
-@media(max-width:2200px) {
-  main {
-    justify-content: flex-end; }
-    main .portfolio {
-      margin-right: 6rem; } }
+@media(max-width:2250px) {
+  main .portfolio {
+    align-items: flex-end;
+    margin-right: 6rem; } }
 
 /*# sourceMappingURL=media-queries.css.map */

@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": ";EACE,IAAI;IACF,eAAe,EAAE,QAAQ;IACzB,eAAU;MACR,YAAY,EAAE,IAAI",
+"mappings": ";EAEI,eAAU;IACR,WAAW,EAAE,QAAQ;IACrB,YAAY,EAAE,IAAI",
 "sources": ["../sass/media-queries.sass"],
 "names": [],
 "file": "media-queries.css"
