@@ -4,24 +4,26 @@
 
   aside .experience-container {
     margin-left: 6rem; } }
-@media(max-width: 1530px) {
-  main section.portfolio {
-    margin-right: 6rem; }
-    main section.portfolio .projects .project:nth-child(1), main section.portfolio .projects .project:nth-child(3) {
-      margin-right: 0; }
-    main section.portfolio .projects .project:nth-child(2) {
-      margin-right: 10px; }
-    main section.portfolio .projects .project:nth-child(4) {
-      margin-right: 0; } }
+@media(max-width: 1530px) {}
 @media(max-width: 1360px) {
   aside {
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 3.5rem; }
+    aside .experience-container {
+      margin: 0; }
     aside section.about-me {
       margin-right: 0; }
 
   main .portfolio {
     align-items: center;
-    margin-right: 0;
-    justify-content: center; } }
+    margin: 0;
+    justify-content: flex-start; } }
+@media(max-width: 1050px) {
+  main section.portfolio .projects .project {
+    flex-basis: 100%; }
+    main section.portfolio .projects .project:nth-child(1), main section.portfolio .projects .project:nth-child(3) {
+      margin-right: 0; }
+    main section.portfolio .projects .project:nth-child(3) {
+      margin-bottom: 20px; } }
 
 /*# sourceMappingURL=media-queries.css.map */

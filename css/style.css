@@ -1,5 +1,10 @@
 html {
-  font-family: "Josefin Slab", serif; }
+  box-sizing: border-box;
+  font-family: "Josefin Slab", serif;
+  background: smokewhite; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
 
 .wrapper {
   display: flex;
@@ -10,16 +15,16 @@ main, aside {
   padding: 4rem 2.5rem; }
 
 main .portfolio {
-  margin: 0 6rem; }
+  margin: 4rem 7rem; }
 
 aside .experience-container {
   margin-left: 6rem; }
 
 aside {
-  background: linear-gradient(to left, #FBD3E9, #BB377D);
+  background: linear-gradient(to right, #FBD3E9, #BB377D);
   flex: 1;
   display: flex;
-  max-width: 500px; }
+  max-width: 600px; }
 
 ul {
   padding: 0; }
@@ -48,24 +53,31 @@ ul {
   .experience .big-letter, .experience-continue .big-letter {
     max-width: 150px;
     font-size: 12rem;
-    color: whitesmoke; }
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #70214b, 0 0 1em #a83170, 0 0 0.2em #a83170; }
   .experience .descr, .experience-continue .descr {
     max-width: 290px;
     min-width: 200px;
     padding: 0.7rem;
     padding-right: 2rem;
     align-self: center;
-    color: whitesmoke; }
+    color: #fff; }
     .experience .descr h3, .experience-continue .descr h3 {
-      font-size: 0.8rem;
-      text-transform: uppercase; }
+      font-size: 1rem;
+      text-transform: uppercase;
+      line-height: 1.4rem;
+      letter-spacing: 0.5rem;
+      text-decoration: underline; }
     .experience .descr ul li, .experience-continue .descr ul li {
-      font-size: 1rem; }
+      font-size: 1.1rem;
+      letter-spacing: 0.1rem;
+      line-height: 1.4rem; }
 
 section.about-me {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   z-index: 1;
   padding: 1.5rem;
   height: 90%;
@@ -81,6 +93,7 @@ section.about-me {
     height: 100px;
     margin: 1.5rem auto;
     background-image: url("../img/profile_face.png");
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -96,34 +109,14 @@ section.about-me {
     margin: 7px; }
     section.about-me h2.name span {
       font-weight: 600; }
-  section.about-me #infinity-decoration {
-    padding: 0;
-    position: relative;
-    width: 43px;
-    height: 15px;
-    margin: 0 auto; }
-  section.about-me #infinity-decoration:before,
-  section.about-me #infinity-decoration:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border: 5px solid #de4a75;
-    border-radius: 50px 50px 0 50px;
-    transform: rotate(-45deg); }
-  section.about-me #infinity-decoration:after {
-    left: auto;
-    right: 0;
-    border-radius: 50px 50px 50px 0;
-    transform: rotate(45deg); }
-  section.about-me .header, section.about-me .aboutMe-content {
-    margin-bottom: 10px; }
-  section.about-me .header {
-    margin-top: 40px; }
-  section.about-me .aboutMe-content {
-    margin-bottom: 50px; }
+  section.about-me #infinity-img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    background-image: url("../img/infinite-mathematical-symbol.svg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
   section.about-me #designer, section.about-me #developer {
     color: #888f91;
     padding: 10px 0; }
@@ -164,15 +157,31 @@ section.portfolio {
     section.portfolio .projects .project:nth-child(1), section.portfolio .projects .project:nth-child(3) {
       margin-right: 10px; }
     section.portfolio .projects .project {
+      border: 2px solid red;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: flex-start;
       flex-direction: column;
       border-radius: 8px;
-      height: 300px;
+      height: 400px;
       padding: 30px;
       color: #fff;
       font-size: 20px; }
+      section.portfolio .projects .project .button {
+        padding: 1em 1.5em;
+        border: 2px solid #fff;
+        border-radius: 0.5em;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out; }
+        section.portfolio .projects .project .button:hover {
+          border: 2px solid #272556;
+          color: #272556; }
+  section.portfolio .project-descr {
+    height: 100%; }
 
 .project1 {
   background-image: url("../img/wineBg.svg");
@@ -208,24 +217,26 @@ section.portfolio {
 
   aside .experience-container {
     margin-left: 6rem; } }
-@media(max-width: 1530px) {
-  main section.portfolio {
-    margin-right: 6rem; }
-    main section.portfolio .projects .project:nth-child(1), main section.portfolio .projects .project:nth-child(3) {
-      margin-right: 0; }
-    main section.portfolio .projects .project:nth-child(2) {
-      margin-right: 10px; }
-    main section.portfolio .projects .project:nth-child(4) {
-      margin-right: 0; } }
+@media(max-width: 1530px) {}
 @media(max-width: 1360px) {
   aside {
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 3.5rem; }
+    aside .experience-container {
+      margin: 0; }
     aside section.about-me {
       margin-right: 0; }
 
   main .portfolio {
     align-items: center;
-    margin-right: 0;
-    justify-content: center; } }
+    margin: 0;
+    justify-content: flex-start; } }
+@media(max-width: 1050px) {
+  main section.portfolio .projects .project {
+    flex-basis: 100%; }
+    main section.portfolio .projects .project:nth-child(1), main section.portfolio .projects .project:nth-child(3) {
+      margin-right: 0; }
+    main section.portfolio .projects .project:nth-child(3) {
+      margin-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

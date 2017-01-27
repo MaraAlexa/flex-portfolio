@@ -9,26 +9,38 @@
 @media(max-width: 1530px)
   main
     section.portfolio
-      margin-right: 6rem
+      // margin-right: 6rem
       .projects
-        .project
-          &:nth-child(1), &:nth-child(3)
-            margin-right: 0
-          &:nth-child(2)
-            margin-right: 10px
-          &:nth-child(4)
-            margin-right: 0
+        // .project
+        //   &:nth-child(1), &:nth-child(3)
+        //     margin-right: 0
+        //
+        //   &:nth-child(4)
+        //     margin-right: 0
         // .project.project1, .project.project3, .project.project4
         //   margin-right: 0
 
 @media(max-width: 1360px)
   aside
     flex-direction: column
+    padding: 3.5rem
+    .experience-container
+      margin: 0
 
     section.about-me
       margin-right: 0
   main
     .portfolio
       align-items: center
-      margin-right: 0
-      justify-content: center
+      margin: 0
+      justify-content: flex-start
+@media(max-width: 1050px)
+  main
+    section.portfolio
+      .projects
+        .project
+          flex-basis: 100%
+          &:nth-child(1), &:nth-child(3)
+            margin-right: 0
+          &:nth-child(3)
+            margin-bottom: 20px
